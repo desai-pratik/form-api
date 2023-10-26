@@ -1,0 +1,41 @@
+<form  [formGroup]="myForm" (ngSubmit)="onSubmit()" class="container border p-5 my-5">
+  <div class="mb-3">
+    <label for="input1" class="form-label">First Name</label>
+    <input type="text" formControlName="firstName"  class="form-control" id="input1" required> 
+  </div>
+  <div class="mb-3">
+    <label for="input2" class="form-label">Last Name</label>
+    <input type="text" formControlName="lastName" class="form-control" id="input2" required>
+  </div>
+  <div class="mb-3">
+    <label for="input3" class="form-label">Email</label>
+    <input type="email" formControlName="email" class="form-control" id="input3" required> 
+  </div> 
+  <button type="submit" class="btn btn-primary m-2" [disabled]="isEditing">Submit</button>
+  <button type="button" class="btn btn-primary m-2" [disabled]="!isEditing" (click)="updateData()">Update</button>
+</form>
+
+
+  <table class="container text-center table-dark table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">no.</th>
+        <th scope="col">First Name</th>
+        <th scope="col">last Name</th>
+        <th scope="col">Email</th> 
+        <th scope="col">Edit / Remove</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let iii of formdata">
+        <td>{{iii.id}}</td>
+        <td>{{iii.firstName}}</td>
+        <td>{{iii.lastName}}</td> 
+        <td>{{iii.email}}</td>
+        <td>
+          <button class="btn btn-success mx-2" (click)="editData(iii.id)">Edit</button> 
+          <button class="btn btn-danger mx-2" (click)="delete(iii.id)">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,38 @@
+{
+  "posts": [
+    {
+      "firstName": "eeeeeee",
+      "lastName": "eeeeeeeeeee",
+      "email": "eeeeeeeee",
+      "id": 1
+    },
+    {
+      "firstName": "sssssssssss",
+      "lastName": "sssssssssssssssss",
+      "email": "ssssssss",
+      "id": 2
+    },
+    {
+      "firstName": "sssssssssss",
+      "lastName": "sssssssssssssssss",
+      "email": "ssssssss",
+      "id": 3
+    },
+    {
+      "firstName": "wwwwwwwww",
+      "lastName": "wwww",
+      "email": "wwwwwwwwwwwww",
+      "id": 4
+    },
+    {
+      "firstName": "eeee",
+      "lastName": "eeeeeeeeee",
+      "email": "eeeeeeeeeee",
+      "id": 5
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}
